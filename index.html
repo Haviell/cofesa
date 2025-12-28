@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>COFESA - Comercial Ferreira Santos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+            <link href='logotipo.png' rel='shortcut icon' />
+    <link href='logotipo.png' rel='icon' type='image/x-icon' />
+    <link href='logotipo.png' rel='shortcut icon' type='image/x-icon' />
+    <style>
+        :root {
+            --primary-color: #ff7300;
+            --secondary-color: #FFC72C;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 116px;
+            color: #333;
+        }
+
+        .menu-topo {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .menu-topo a {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .menu-topo a:hover {
+            color: var(--secondary-color);
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0;
+        }
+
+        .navbar-brand img {
+            max-height: 70px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark-color) !important;
+            padding: 1rem 1.2rem !important;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .breadcrumb-hero {
+            background-color: var(--light-color);
+            padding: 40px 0;
+            margin-bottom: 50px;
+        }
+
+        .filter-btn {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .loja-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+
+        .loja-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .loja-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .loja-card-body {
+            padding: 20px;
+        }
+
+        .loja-card h5 {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .btn-cofesa {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .btn-cofesa:hover {
+            background-color: #004d27;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        #back-to-top {
+            background-color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        #back-to-top:hover {
+            background-color: #004d27;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(0, 104, 55, 0.25);
+        }
+
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .transparency-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .contact-info {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .job-card {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 20px;
+            margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+
+        .job-card:hover {
+            background-color: rgba(0, 104, 55, 0.05);
+            padding-left: 25px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -13px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 18px;
+            }
+
+            .left::after,
+            .right::after {
+                left: 18px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu Topo -->
+    <div class="menu-topo">
+        <div class="container">
+            <div class="d-flex justify-content-end align-items-center">
+                <span class="me-3">Redes Sociais:</span>
+                <a href="https://www.facebook.com/cofesaitarare" class="me-3" target="_blank">
+                    <i class="fab fa-facebook-square fa-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/cofesaitarare" target="_blank">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo Cofesa" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-page="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre" data-page="sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#grupo" data-page="grupo">Grupo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#transparencia" data-page="transparencia">Transparência</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fale-conosco" data-page="fale-conosco">Fale Conosco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trabalhe-conosco" data-page="trabalhe-conosco">Trabalhe Conosco</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal (SPA) -->
+    <div id="main-content">
+        <!-- Página Home -->
+        <section id="home-page" class="page-content active">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h1 class="display-4 fw-bold">COFESA </h1>
+                            <p class="lead">Uma das maiores redes de supermercados do país em termos de vendas e
+                                arrecadação, ocupando posição de destaque no ranking nacional.</p>
+                            <a href="#grupo" class="btn btn-cofesa btn-lg mt-3" data-page="grupo">Nossas Lojas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center p-4 shadow-sm rounded">
+                            <i class="fas fa-store fa-3x mb-3" style="color: var(--primary-color);"></i>
+                            <h4>+15 Lojas</h4>
+                            <p>Presente em várias cidades da região e grandes centros como São Paulo e Curitiba.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center p-4 shadow-sm rounded">
+                            <i class="fas fa-history fa-3x mb-3" style="color: var(--primary-color);"></i>
+                            <h4>80+ Anos de História</h4>
+                            <p>Desde a inauguração de um armazém na cidade de Itararé em 1942.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center p-4 shadow-sm rounded">
+                            <i class="fas fa-award fa-3x mb-3" style="color: var(--primary-color);"></i>
+                            <h4>Excelência em Vendas</h4>
+                            <p>Destaque no ranking nacional dos supermercados em vendas e arrecadação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Sobre -->
+        <section id="sobre-page" class="page-content">
+            <div class="breadcrumb-hero">
+                <div class="container">
+                    <h1 class="display-5 fw-bold">Sobre a Cofesa</h1>
+                </div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <h2 class="section-title">Nossa História</h2>
+                        <p>A história do Grupo Cofesa começou com a inauguração de um armazém na cidade de Itararé. Com
+                            a administração do proprietário Gumercindo Ferreira dos Santos, o tempo passou e a loja
+                            cresceu, alcançando as cidades da região, como Itapeva, Capão Bonito, Itapetininga e grandes
+                            centros como São Paulo e Curitiba.</p>
+                        <p>O Cofesa tornou-se uma das maiores redes de supermercados do país em termos de vendas e
+                            arrecadação, ocupando posição de destaque no ranking nacional dos supermercados.</p>
+                        <p>Hoje, o grupo conta com diversas lojas espalhadas por várias cidades, oferecendo produtos de
+                            qualidade, preços competitivos e um atendimento diferenciado para seus clientes.</p>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <img style="width: 702px; height: 368px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTMSjRnuJjZMswXDtbP_yp6i_qVZ-hJGL8-w&s"
+                            alt="Interior de supermercado" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+
+                <!-- Linha do Tempo -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <h2 class="section-title text-center">Nossa Trajetória</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="timeline mt-4">
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <h5>1942</h5>
+                                    <p>Inauguração do primeiro armazém na cidade de Itararé sob administração de
+                                        Gumercindo Ferreira dos Santos.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <h5>Década de 1960</h5>
+                                    <p>Expansão para outras cidades da região, consolidando a presença da marca.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <h5>Década de 1990</h5>
+                                    <p>Modernização das lojas e entrada em grandes centros urbanos como São Paulo e
+                                        Curitiba.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <h5>Atualmente</h5>
+                                    <p>Uma das maiores redes de supermercados do país em termos de vendas e arrecadação,
+                                        com posição de destaque no ranking nacional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Grupo -->
+        <section id="grupo-page" class="page-content">
+            <div class="breadcrumb-hero">
+                <div class="container">
+                    <h1 class="display-5 fw-bold">Nossas Lojas</h1>
+                </div>
+            </div>
+
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="list-buttons-filter d-flex flex-wrap justify-content-center py-2 mb-5">
+                            <button data-filter="all" class="active filter-btn">Todos</button>
+                            <button data-filter="itarare" class="filter-btn">Itararé</button>
+                            <button data-filter="itapeva" class="filter-btn">Itapeva</button>
+                            <button data-filter="itapetininga" class="filter-btn">Itapetininga</button>
+                            <button data-filter="capao_bonito" class="filter-btn">Capão Bonito</button>
+                            <button data-filter="curitiba" class="filter-btn">Curitiba</button>
+                        </div>
+                        <p style="text-align: center;"> algumas de nossas lojas podem não contér acesso a um número de whatsapp ativo.</p>
+                    </div>
+                </div>
+
+                <div class="row" id="lojas-container">
+                    <!-- Lojas serão carregadas via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Transparência -->
+        <section id="transparencia-page" class="page-content">
+            <div class="breadcrumb-hero">
+                <div class="container">
+                    <h1 class="display-5 fw-bold">Transparência</h1>
+                </div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <p>Na Cofesa, nosso compromisso é com a excelência, qualidade, respeito e igualdade entre nossos
+                            colaboradores. Confira os relatórios de igualdade salarial entre Mulheres e Homens
+                            referentes ao 2º ciclo de 2025.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <table class="table table-striped transparency-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="col-10">Documento</th>
+                                    <th scope="col" class="col-2 text-center">Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Relatório igualdade salarial 2º ciclo 2025 - Loja 08</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-cofesa btn-sm download-btn"
+                                            data-file="RelatorioIgualdadeSalarial-2-ciclo-2025-Lj-08.pdf">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Relatório igualdade salarial 2º ciclo 2025 - Loja 10</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-cofesa btn-sm download-btn"
+                                            data-file="RelatorioIgualdadeSalarial-2-ciclo-2025-Lj-10.pdf">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Relatório igualdade salarial 2º ciclo 2025 - Loja 15</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-cofesa btn-sm download-btn"
+                                            data-file="RelatorioIgualdadeSalarial-2-ciclo-2025-Lj-15.pdf">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Relatório igualdade salarial 2º ciclo 2025 - Loja 17</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-cofesa btn-sm download-btn"
+                                            data-file="RelatorioIgualdadeSalarial-2-ciclo-2025-Lj-17.pdf">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Relatório igualdade salarial 2º ciclo 2025 - Loja 18</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-cofesa btn-sm download-btn"
+                                            data-file="RelatorioIgualdadeSalarial-2-ciclo-2025-Lj-18.pdf">
+                                            <i class="fas fa-download"></i> Download
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Fale Conosco -->
+        <section id="fale-conosco-page" class="page-content">
+            <div class="breadcrumb-hero">
+                <div class="container">
+                    <h1 class="display-5 fw-bold">Fale Conosco</h1>
+                </div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mb-4">
+                        <h2 class="section-title">Envie sua Mensagem</h2>
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Nome Completo</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Assunto</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-cofesa">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="contact-info">
+                            <h3 class="section-title">Informações de Contato</h3>
+                            <div class="mb-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h5>Endereço</h5>
+                                <p>Administração - Itararé-SP<br>
+                                    Rua João Ghizzi, 395 - Centro<br>
+                                    CEP 18460-049</p>
+                            </div>
+                            <div class="mb-4">
+                                <i class="fas fa-phone-alt"></i>
+                                <h5>Telefone</h5>
+                                <p>(15) 3532-4580</p>
+                            </div>
+                            <div class="mb-4">
+                                <i class="fas fa-envelope"></i>
+                                <h5>E-mail</h5>
+                                <p>contato@cofesa.com.br</p>
+                            </div>
+                            <div class="mb-4">
+                                <i class="fas fa-clock"></i>
+                                <h5>Horário de Atendimento</h5>
+                                <p>Segunda a Sexta: 8h às 18h<br>
+                                    Sábado: 8h às 12h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Trabalhe Conosco -->
+        <section id="trabalhe-conosco-page" class="page-content">
+            <div class="breadcrumb-hero">
+                <div class="container">
+                    <h1 class="display-5 fw-bold">Trabalhe Conosco</h1>
+                </div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 mb-4">
+                        <h2 class="section-title">Venha Fazer Parte da Nossa Equipe</h2>
+                        <p>A Cofesa valoriza seus colaboradores e busca constantemente talentos para integrar sua
+                            equipe. Oferecemos um ambiente de trabalho dinâmico, oportunidades de crescimento e
+                            desenvolvimento profissional.</p>
+
+                        <h4 class="mt-5 mb-4" style="color: var(--primary-color);">Vagas Disponíveis</h4>
+
+                        <div class="job-card">
+                            <h5>Repositor de Mercadorias</h5>
+                            <p><strong>Local:</strong> Itararé - SP</p>
+                            <p><strong>Requisitos:</strong> Ensino médio completo, experiência anterior desejável.</p>
+                            <button class="btn btn-cofesa btn-sm">Candidatar-se</button>
+                        </div>
+
+                        <div class="job-card">
+                            <h5>Caixa</h5>
+                            <p><strong>Local:</strong> Itapeva - SP</p>
+                            <p><strong>Requisitos:</strong> Ensino médio completo, experiência com sistema PDV.</p>
+                            <button class="btn btn-cofesa btn-sm">Candidatar-se</button>
+                        </div>
+
+                        <div class="job-card">
+                            <h5>Auxiliar de Limpeza</h5>
+                            <p><strong>Local:</strong> Capão Bonito - SP</p>
+                            <p><strong>Requisitos:</strong> Ensino fundamental completo.</p>
+                            <button class="btn btn-cofesa btn-sm">Candidatar-se</button>
+                        </div>
+
+                        <div class="job-card">
+                            <h5>Açougueiro</h5>
+                            <p><strong>Local:</strong> Itapetininga - SP</p>
+                            <p><strong>Requisitos:</strong> Experiência comprovada na função, curso de açougueiro
+                                desejável.</p>
+                            <button class="btn btn-cofesa btn-sm">Candidatar-se</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="contact-info">
+                            <h3 class="section-title">Envie seu Currículo</h3>
+                            <p>Caso não encontre uma vaga adequada ao seu perfil no momento, você pode enviar seu
+                                currículo para nosso banco de talentos.</p>
+
+                            <form id="job-form" class="mt-4">
+                                <div class="mb-3">
+                                    <label for="job-name" class="form-label">Nome Completo</label>
+                                    <input type="text" class="form-control" id="job-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="job-email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="job-email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="job-phone" class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="job-phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="job-cv" class="form-label">Currículo (PDF)</label>
+                                    <input type="file" class="form-control" id="job-cv" accept=".pdf">
+                                </div>
+                                <button type="submit" class="btn btn-cofesa w-100">Enviar Currículo</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-light">COFESA - Comercial Ferreira Santos</h5>
+                    <p class="text-light mb-0">Uma das maiores redes de supermercados do país</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-light mb-0">&copy; 2012 - 2025 Cofesa - Todos os Direitos Reservados</p>
+                    <p> Desenvolvido por <a href="gcompanydigital.com.br"><span>G-Company</span></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <div id="back-to-top">
+        <i class="fas fa-chevron-up text-white"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        // Dados das lojas
+        const lojas = [
+            {
+                cidade: "itarare",
+                imagem: "loja11.jpg",
+                nome: "Administração - Itararé-SP",
+                telefone: "(15) 3532-4580",
+                endereco: "Rua João Ghizzi, 395 - Centro<br>CEP 18460-049",
+                whatsapp: ""
+            },
+            {
+                cidade: "itarare",
+                imagem: "loja01.jpg",
+                nome: "Loja 01 - Itararé-SP",
+                telefone: "(15) 3532-4644 - 3532-4487",
+                endereco: "Rodovia SP 258 Km 339<br>Jardim Regina - CEP 18460-523",
+                whatsapp: ""
+            },
+            {
+                cidade: "itarare",
+                imagem: "loja02.jpg",
+                nome: "Loja 02 - Itararé-SP",
+                telefone: "(15) 3532-4611 - 3532-4420<br><i class='fab fa-whatsapp'></i> (15) 99776-1984",
+                endereco: "Rua São Pedro, 2221 - Centro<br>CEP 18460-009",
+                whatsapp: "5515997761984"
+            },
+            {
+                cidade: "itapeva",
+                imagem: "loja06.jpg",
+                nome: "Loja 06 - Itapeva-SP",
+                telefone: "(15) 3522-4059 - 3522-0071",
+                endereco: "Praça 20 de Setembro, 326<br>Centro - CEP 18400-230",
+                whatsapp: ""
+            },
+            {
+                cidade: "itarare",
+                imagem: "loja07.jpg",
+                nome: "Loja 07 - Itararé-SP",
+                telefone: "(15) 3532-4007 - 3532-4648<br><i class='fab fa-whatsapp'></i> (15) 99777-3796",
+                endereco: "Rua São Pedro, 1775 - Centro<br>CEP 18460-009",
+                whatsapp: "5515997773796"
+            },
+            {
+                cidade: "itapeva",
+                imagem: "loja08.jpg",
+                nome: "Loja 08 - Itapeva-SP",
+                telefone: "(15) 3522-4344 - 3522-4352",
+                endereco: "Rua Ruy Braborsa, 494 - Centro<br>CEP 18400-385",
+                whatsapp: ""
+            },
+            {
+                cidade: "itarare",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/Loja09.jpg",
+                nome: "Loja 09 - Itararé-SP",
+                telefone: "(15) 3532-4119 - 3532-4046<br><i class='fab fa-whatsapp'></i> (15) 99781-8089",
+                endereco: "Rua São Pedro, 1313 - Centro<br>CEP 18460-009",
+                whatsapp: "5515997818089"
+            },
+            {
+                cidade: "itapetininga",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/Loja10.jpg",
+                nome: "Loja 10 - Itapetininga-SP",
+                telefone: "(15) 3271-1355 - 3272-4370",
+                endereco: "Avenida Peixoto Gomide, 395 - Centro<br>CEP 18200-160",
+                whatsapp: ""
+            },
+            {
+                cidade: "itapetininga",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/EletroItapetininga.jpg",
+                nome: "Eletro Móveis - Itapetininga-SP",
+                telefone: "(15) 3271-1355 - 3272-4370",
+                endereco: "Avenida Peixoto Gomide, 395 - Centro<br>CEP 18200-160",
+                whatsapp: ""
+            },
+            {
+                cidade: "capao_bonito",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/Loja11.jpg",
+                nome: "Loja 14 - Capão Bonito-SP",
+                telefone: "(15) 3542-1163 - 3542-2409",
+                endereco: "Rua Floriano Peixoto, 827 - Centro<br>CEP 18300-250",
+                whatsapp: ""
+            },
+            {
+                cidade: "capao_bonito",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/Loja17.jpg",
+                nome: "Loja 17 - Capão Bonito-SP",
+                telefone: "(15) 3543-9700<br><i class='fab fa-whatsapp'></i> (15) 99665-5682",
+                endereco: "Rua Altino Arantes, 1061 - Centro<br>CEP 18300-290",
+                whatsapp: "5515996655682"
+            },
+            {
+                cidade: "itapetininga",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/Loja18.jpg",
+                nome: "Loja 18 - Itapetininga-SP",
+                telefone: "(15) 3376-8100<br><i class='fab fa-whatsapp'></i> (15) 99151-8888",
+                endereco: "Rua José de Almeida Carvalho, 1000 - Vila Leonor<br>CEP 18213-145",
+                whatsapp: "5515991518888"
+            },
+            {
+                cidade: "itapeva",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/max.jpg",
+                nome: "MAX - Itapeva-SP",
+                telefone: "(15) 3524-9191",
+                endereco: "Av. Dona Paulina de Moraes, 926<br>Central Park - CEP 18407-110",
+                whatsapp: ""
+            },
+            {
+                cidade: "capao_bonito",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/superg01.jpg",
+                nome: "Super G Loja 01 - Capão Bonito-SP",
+                telefone: "(15) 3542-2412 - 3542-4440",
+                endereco: "Rua Antonio de Souza Lopes, 152<br>Vila Nova Capão Bonito<br>CEP 18407-110",
+                whatsapp: ""
+            },
+            {
+                cidade: "curitiba",
+                imagem: "https://www.cofesa.com.br/assets/img/lojas/superg02.jpg",
+                nome: "Super G Loja 02 - Curitiba-PR",
+                telefone: "(41) 3263-1000",
+                endereco: "Rua Brasílio Itiberê, 377<br>Jardim Botânico<br>CEP 80.210-060",
+                whatsapp: ""
+            }
+        ];
+
+        // Sistema de Navegação SPA
+        document.addEventListener('DOMContentLoaded', function () {
+            // Carregar lojas na página Grupo
+            renderLojas();
+
+            // Configurar navegação SPA
+            const navLinks = document.querySelectorAll('a[data-page]');
+            const pages = document.querySelectorAll('.page-content');
+
+            // Função para mostrar uma página específica
+            function showPage(pageId) {
+                // Esconder todas as páginas
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+
+                // Mostrar a página solicitada
+                const targetPage = document.getElementById(`${pageId}-page`);
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                }
+
+                // Atualizar link ativo na navegação
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-page') === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Atualizar URL no histórico
+                history.pushState(null, '', `#${pageId}`);
+
+                // Rolar para o topo
+                window.scrollTo(0, 0);
+            }
+
+            // Configurar eventos de clique nos links de navegação
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+
+            // Verificar URL inicial
+            const hash = window.location.hash.substring(1) || 'home';
+            showPage(hash);
+
+            // Configurar botões de filtro
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Atualizar botão ativo
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filtrar lojas
+                    const filter = this.getAttribute('data-filter');
+                    filterLojas(filter);
+                });
+            });
+
+            // Configurar formulário de contato
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
+                    this.reset();
+                });
+            }
+
+            // Configurar formulário de trabalho
+            const jobForm = document.getElementById('job-form');
+            if (jobForm) {
+                jobForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Currículo enviado com sucesso! Entraremos em contato caso haja oportunidades compatíveis com seu perfil.');
+                    this.reset();
+                });
+            }
+
+            // Configurar botões de download
+            const downloadButtons = document.querySelectorAll('.download-btn');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const fileName = this.getAttribute('data-file');
+                    alert(`Download do arquivo "${fileName}" iniciado.`);
+                    // Em um ambiente real, aqui seria feito o download do arquivo
+                });
+            });
+
+            // Configurar botão "Voltar ao topo"
+            const backToTopButton = document.getElementById('back-to-top');
+            if (backToTopButton) {
+                backToTopButton.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Mostrar/ocultar botão baseado na posição de rolagem
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 300) {
+                        backToTopButton.style.opacity = '1';
+                        backToTopButton.style.visibility = 'visible';
+                    } else {
+                        backToTopButton.style.opacity = '0';
+                        backToTopButton.style.visibility = 'hidden';
+                    }
+                });
+            }
+
+            // Configurar botões de candidatura nas vagas
+            const applyButtons = document.querySelectorAll('.job-card .btn-cofesa');
+            applyButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const jobTitle = this.closest('.job-card').querySelector('h5').textContent;
+                    alert(`Obrigado pelo interesse na vaga "${jobTitle}"! Redirecionando para o formulário de candidatura...`);
+                    // Em um ambiente real, aqui seria redirecionado para o formulário de candidatura
+                });
+            });
+        });
+
+        // Função para renderizar as lojas
+        function renderLojas() {
+            const container = document.getElementById('lojas-container');
+            container.innerHTML = '';
+
+            lojas.forEach(loja => {
+                const col = document.createElement('div');
+                col.className = `col-md-4 mb-4 loja-item ${loja.cidade}`;
+
+                let whatsappButton = '';
+                if (loja.whatsapp) {
+                    whatsappButton = `<a href="https://wa.me/${loja.whatsapp}" target="_blank" class="btn btn-cofesa mt-2"><i class="fab fa-whatsapp"></i> Whatsapp</a>`;
+                }
+
+                col.innerHTML = `
+                    <div class="loja-card">
+                        <img src="${loja.imagem}" alt="${loja.nome}">
+                        <div class="loja-card-body">
+                            <h5>${loja.nome}</h5>
+                            <p><i class="fas fa-phone-alt"></i> ${loja.telefone}</p>
+                            <p><i class="fas fa-map-marker-alt"></i> ${loja.endereco}</p>
+                            ${whatsappButton}
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(col);
+            });
+        }
+
+        // Função para filtrar as lojas
+        function filterLojas(filter) {
+            const lojaItems = document.querySelectorAll('.loja-item');
+
+            lojaItems.forEach(item => {
+                if (filter === 'all' || item.classList.contains(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
